@@ -3,9 +3,6 @@ import restService from "../services/RestService";
 import TextField from "../components/TextField";
 
 const Panel = () => {
-    console.log('Hello from component');
-
-
 
     return(
         <div>
