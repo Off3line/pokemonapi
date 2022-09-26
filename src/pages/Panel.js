@@ -1,19 +1,16 @@
 import React, {useEffect} from "react";
 import restService from "../services/RestService";
+import TextField from "../components/TextField";
 
 const Panel = () => {
     console.log('Hello from component');
-    useEffect(() => {
-        restService.getPokemon()
-            .then(result => {
-                console.log('pikachu',result)
-            })
-    })
+
 
 
     return(
         <div>
             <p>Hello World!</p>
+            <TextField/>
         </div>
     );
 
