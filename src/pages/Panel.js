@@ -1,13 +1,10 @@
 import React, {useEffect} from "react";
-import restService from "../services/RestService";
-import TextField from "../components/TextField";
-
+import restService from "../services/RestService";  
 const Panel = () => {
 
     return(
         <div>
             <p>Hello World!</p>
-            <TextField/>
         </div>
     );
 
