@@ -1,14 +1,19 @@
-import { Text } from "@chakra-ui/react";
-import React, {useEffect} from "react";
+import React, {useEffect,useState} from "react";
 import restService from "../services/RestService";
+import TopBar from "./TopBar";
+
 const Panel = () => {
-    console.log('Hello from component');
+    const [foundpokemon,setpokemon] = useState([]);
 
-
+    useEffect(() => {
+        restService.getPokemon()
+        .then(result => {setpokemon(result)})
+    },[])
+    
 
     return(
         <div>
-            <Text fontSize='6xl'>Chakra UI</Text>
+            <TopBar pokemon={foundpokemon}/>
             <p>Hello World!</p>
         </div>
     );
