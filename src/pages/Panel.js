@@ -1,4 +1,5 @@
 import React, {useEffect,useState} from "react";
+import SearchField from "../components/SearchPokemon";
 import restService from "../services/RestService";
 import Stats from "./Stats";
 import TopBar from "./TopBar";
@@ -17,7 +18,7 @@ const Panel = () => {
         <div>
             <TopBar pokemon={foundpokemon}/>
             <Stats stats={foundpokemon}/>
-            <p>Hello World!</p>
+            <SearchField/>
         </div>
     );
 

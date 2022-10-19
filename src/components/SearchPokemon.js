@@ -1,14 +1,25 @@
-import React from "react";
+import { Button, Input } from "@chakra-ui/react";
+import {React,useState} from "react";
 
 
-const TextField = () => {
+const SearchField = () => {
+    const [pokemon, setPokemon] = useState('');
+    
+    const handleChange = (event) => {
+        setPokemon(event.target.value)
+    }
+    const searchPokemon = () => {
+        console.log(pokemon,'typed');
 
+    }
 
     return(
         <div>
-            <TextField></TextField>
+            <Input variant='filled' placeholder='Search Pokémon' width='auto' onChange={handleChange} />
+            <Button colorScheme='teal' variant='ghost' onClick={searchPokemon} value={pokemon} >Search</Button>
         </div>
     )
 }
 
-export default TextField;
+
+export default SearchField;
