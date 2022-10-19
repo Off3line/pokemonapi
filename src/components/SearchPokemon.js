@@ -16,9 +16,9 @@ const SearchPokemon = ({setPok}) => {
             })
 
     }
-
+/** maybe remove the input and button to abstract the components away from logic.. */
     return(
-        <div>
+        <div> 
             <Input variant='filled' placeholder='Search Pokémon' width='auto' onChange={handleChange} />
             <Button colorScheme='teal' variant='ghost' onClick={searchPokemon} >Search</Button>
         </div>
