@@ -1,24 +1,21 @@
 import React, {useEffect,useState} from "react";
-import SearchField from "../components/SearchPokemon";
+import { Button, Input } from "@chakra-ui/react";
 import restService from "../services/RestService";
 import Stats from "./Stats";
 import TopBar from "./TopBar";
+import SearchPokemon from "../components/SearchPokemon";
 
 
 const Panel = () => {
-    const [foundpokemon,setpokemon] = useState([]);
-
-    useEffect(() => {
-        restService.getPokemon()
-        .then(result => {setpokemon(result)})
-    },[])
+    const [currentPokemon,setCurrentPokemon] = useState([]);
+        
     
 
     return(
         <div>
-            <TopBar pokemon={foundpokemon}/>
-            <Stats stats={foundpokemon}/>
-            <SearchField/>
+            <TopBar pokemon={currentPokemon}/>
+            <Stats stats={currentPokemon}/>
+            <SearchPokemon setPok={setCurrentPokemon}/>
         </div>
     );
 
