@@ -1,4 +1,4 @@
-import { Button, Input } from "@chakra-ui/react";
+import { Box, Button, Container as div, Input } from "@chakra-ui/react";
 import {React,useState} from "react";
 import restService from "../services/RestService";
 
@@ -18,9 +18,9 @@ const SearchPokemon = ({setPok}) => {
     }
 /** maybe remove the input and button to abstract the components away from logic.. */
     return(
-        <div> 
-            <Input variant='filled' placeholder='Search Pokémon' width='auto' onChange={handleChange} />
-            <Button colorScheme='teal' variant='ghost' onClick={searchPokemon} >Search</Button>
+        <div bg='tomato' width='100%'> 
+            <Input variant='filled' placeholder='Search Pokémon' width='auto' onChange={handleChange} size='lg' />
+            <Button colorScheme='teal' variant='ghost' onClick={searchPokemon} size='lg'>Search</Button>
         </div>
     )
 } 
