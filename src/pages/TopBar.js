@@ -6,7 +6,7 @@ const TopBar = ({pokemon}) => {
     console.log(pokemon,'bar');
     return(
         <div>
-          <Text fontSize='3xl'>Name: {pokemon.name}</Text>
+          <Text fontSize='4xl'>Name: {pokemon.name}</Text>
         </div>
     )
 }

@@ -13,7 +13,7 @@ const Panel = () => {
     
 
     return(
-        <Grid h='200px'w='400px' templateColumns='repeat(2,1fr)' templateRows='repeat(3,1fr)'>
+        <Grid h='200px'w='450px' templateColumns='repeat(2,1fr)' templateRows='repeat(3,1fr)'>
             <GridItem colSpan={2}>
             <TopBar pokemon={currentPokemon}/>
             </GridItem>
