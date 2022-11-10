@@ -1,4 +1,4 @@
-import { Badge, Box, Grid, GridItem, Image, List, ListItem, Stack, Text } from "@chakra-ui/react";
+import { Badge, Box, Grid, GridItem, Image, List, ListItem, Spacer, Stack, Text, Flex, Tag } from "@chakra-ui/react";
 import {React,useState} from "react";
 import  '../css/Style.css'
 
@@ -6,17 +6,17 @@ const Stats = ({stats}) => {
     return(
         
         <Box>
-             <Text fontSize='3xl'>Pokédex Data</Text>   
-            <Grid templateColumns='repeat(2, 1fr)' gap={1}>
-                <GridItem h='5'>
-                <Text fontSize='sm'>Index No.</Text>
-                </GridItem>
-                <GridItem h='5'>
-                <Badge colorScheme='purple'>{stats.id}</Badge>
-                </GridItem>
-
-            </Grid>
+            
+            <Text fontSize='3xl'>Pokédex Data</Text>   
+            <Box w='150px'>
+            <Flex minWidth='max-content'> 
+            <Text fontSize='sm'>Index No.</Text>
+            <Spacer/>
+            <Tag colorScheme='purple'>{stats.id}</Tag>
+            </Flex>
            
+            </Box>
+            
             <List>
             {stats.abilities?.map(typ => { return ( <ListItem key={typ.ability.name}>{typ.ability.name}</ListItem> ) })}
             </List>
