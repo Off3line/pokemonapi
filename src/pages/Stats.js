@@ -14,10 +14,13 @@ const Stats = ({stats}) => {
             <StatsValue label='Index No.' value={stats.id}/>    
             <StatsValue label='Height' value={stats.height} color='green'/>
             <StatsValue label='Weight' value={stats.weight} color='red'/>
-
-            <List>
+            {/**
+             *  <List>
             {stats.abilities?.map(typ => { return ( <ListItem key={typ.ability.name}>{typ.ability.name}</ListItem> ) })}
             </List>
+             * 
+             */}
+           
         </Box>
          
     )
