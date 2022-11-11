@@ -1,5 +1,5 @@
 import React, {useEffect,useState} from "react";
-import { Button, Container, Grid, GridItem, HStack, Img, Input, VStack } from "@chakra-ui/react";
+import { Box, Button, Container, Grid, GridItem, HStack, Img, Input, VStack } from "@chakra-ui/react";
 import Stats from "./Stats";
 import TopBar from "./TopBar";
 import SearchPokemon from "../components/SearchPokemon";
@@ -13,7 +13,8 @@ const Panel = () => {
     
 
     return(
-        <Grid h='200px'w='450px' templateColumns='repeat(2,1fr)' templateRows='repeat(3,1fr)'>
+        <Box shadow='md' borderWidth='1px' p='5'h='' >
+            <Grid h='200px'w='450px' templateColumns='repeat(2,1fr)' templateRows='repeat(3,1fr)'>
             <GridItem colSpan={2}>
             <TopBar pokemon={currentPokemon}/>
             </GridItem>
@@ -27,6 +28,8 @@ const Panel = () => {
             <SearchPokemon setPok={setCurrentPokemon}/>
             </GridItem>
         </Grid>
+        </Box>
+       
     );
 
 }

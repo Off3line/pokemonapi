@@ -11,9 +11,8 @@ const App = () => {
 return  (
     
      <ChakraProvider>
-       <Img src={logopokemon} alt='pokemon logo' width='400px' />
+       <Img src={logopokemon} alt='pokemon logo' width='400px'/>
           <Flex justify='center' >
-          <Panel/>
           <Panel/>
           </Flex>
      </ChakraProvider>
