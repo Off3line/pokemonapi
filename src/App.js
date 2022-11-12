@@ -11,17 +11,18 @@ import { useState } from 'react';
 const App = () => {
 
 
-     const [id,setId] = useState(1);
-     const [panels, setPanels] = useState([<Display addPanel={add} removePanel={rem} id={0}/>]); 
+     let id = 0;
+     const [panels, setPanels] = useState([<Display addPanel={add} removePanel={rem} id={id}/>]); 
      console.log(panels);
 
      function add(event){
-          setId(id+1)
-          setPanels([...panels,<Display addPanel={add} removePanel={rem} id={id}/>])
+          id++;
+          setPanels([...panels,{id: id, addPanel: add, removePanel: rem}])
           console.log(panels);
      }
      function rem(){
-          
+          setPanels(panels.filter(p => p.id !== id))
+          id--
 
      }
 
