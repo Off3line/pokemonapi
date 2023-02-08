@@ -7,10 +7,6 @@ import Panel from "./Panel";
 
 const Display = ({addPanel,removePanel, id}) => {
    
-  
-   
-
-
 
     return(
     
