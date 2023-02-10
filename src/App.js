@@ -34,11 +34,6 @@ return  (
      )
 }
 
-export default function Simple() {
-     const { rive, RiveComponent } = useRive({
-       src: 'https://cdn.rive.app/animations/vehicles.riv',
-       autoplay: false,
-     });
 
 const PanelDisplay = ({panels,add,rem}) => {
 
@@ -47,7 +42,7 @@ const PanelDisplay = ({panels,add,rem}) => {
           if(panels.length == 0)
           {
                return (
-                    <RiveComponent className="foo" aria-label="Label" />
+                    <p>Helo world</p>
                    )
           }
           return (
