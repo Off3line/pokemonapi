@@ -1,9 +1,5 @@
 import { ChakraProvider, Img, Flex, HStack, LightMode } from '@chakra-ui/react';
-import logopokemon from './assets/pokemon_logo.png';
 import { useEffect, useState } from 'react';
-import {useRive,RiveComponent} from '@rive-app/react-canvas';
-import AddIconButton from './components/AddIconButton';
-import Rive from '@rive-app/react-canvas';
 import PanelDisplay from './components/PanelDisplay';
 
 
@@ -25,10 +21,7 @@ const App = () => {
 
 return  (
      <ChakraProvider>
-       
-          <div>
-              <PanelDisplay panels={panels} add={add} rem={rem} />
-          </div>
+          <PanelDisplay panels={panels} add={add} rem={rem} />
      </ChakraProvider>
      )
 }
