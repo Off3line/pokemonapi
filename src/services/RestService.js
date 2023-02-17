@@ -9,7 +9,8 @@ const getPokemon = () =>{
 }
 
 const setPokemon = (poke) => {
-    const request = axios.get(url+poke)
+    const pokeSmallCase = poke.toLowerCase()
+    const request = axios.get(url+pokeSmallCase)
     return request.then( response => {return response.data})
 }
 
