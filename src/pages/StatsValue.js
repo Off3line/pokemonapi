@@ -9,9 +9,9 @@ const StatsValue = ({label,value,color}) =>{
     return (
         <Box w='175px' marginBlockEnd='0.5'>
             <Flex minWidth='max-content'>
-                <Text fontSize='sm'>{label}</Text>
+                <Text fontSize='lg'>{label}</Text>
                 <Spacer/>
-                <Tag colorScheme={color}>{value}</Tag>
+                <Tag colorScheme={color} size={'lg'}>{value}</Tag>
             </Flex>
         </Box>
     )

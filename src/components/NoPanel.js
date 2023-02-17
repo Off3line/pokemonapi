@@ -13,7 +13,7 @@ const NoPanel = ({add}) =>{
         <Text fontSize='30px' color='black'>
         Whoops! There are no more panels.. Try adding a few by clicking on the button below!
         </Text>
-        <Button onClick={handleClick} colorScheme='teal' variant='ghost'>Add Panel</Button>
+        <Button onClick={handleClick} colorScheme='teal' variant='outline' size='lg'>Add Panel</Button>
         </Box>
         </VStack>
        

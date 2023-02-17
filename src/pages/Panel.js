@@ -18,7 +18,7 @@ const Panel = () => {
             <HStack>
                 <Sprite sprite={currentPokemon}/>
                 <Spacer/>
-                <Stats stats={currentPokemon} />
+                <Stats pokemon={currentPokemon} />
             </HStack>
             <SearchPokemon setPok={setCurrentPokemon}/>
         </Box>
