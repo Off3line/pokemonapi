@@ -12,9 +12,9 @@ const PanelDisplay = ({panels,add,rem}) => {
     }
     return (
         
-         <HStack justify='center' spacing={8}>
+         <Wrap justify='center' spacing={8}>
             {panels.map((item) => <Display addPanel={add} removePanel={(e) => rem(item.id)} key={item.id}/>)}
-        </HStack>
+        </Wrap>
 
     
     ) 
